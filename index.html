@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>[Prénom Nom] · Naturopathe à Paris, fatigue</title>
+<meta name="description" content="[Une phrase qui décrit ton accompagnement, environ 150 caractères. C'est ce que Google affiche sous ton nom.]">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --fond: #F7F7F2;
+    --blanc: #FFFFFF;
+    --vert: #1D5446;
+    --vert-doux: #E4EDE7;
+    --or: #B8955A;
+    --encre: #1B2622;
+    --gris: #5D6964;
+    --trait: #D9DFD9;
+    --serif: "Young Serif", Georgia, "Times New Roman", serif;
+    --sans: "Hanken Grotesk", "Helvetica Neue", Arial, sans-serif;
+    --largeur: 1080px;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; scroll-padding-top: 72px; }
+  body { font-family: var(--sans); font-size: 1.0625rem; line-height: 1.6; color: var(--encre); background: var(--blanc); }
+  img { max-width: 100%; display: block; }
+  a { color: inherit; }
+  :focus-visible { outline: 3px solid var(--or); outline-offset: 3px; }
+
+  .conteneur { width: 100%; max-width: var(--largeur); margin: 0 auto; padding: 0 1.5rem; }
+  h1, h2, h3 { font-family: var(--serif); font-weight: 400; line-height: 1.15; color: var(--vert); }
+  h2 { font-size: clamp(1.75rem, 4vw, 2.5rem); margin-bottom: 1.5rem; max-width: 20ch; }
+  h3 { font-size: 1.3rem; margin-bottom: .5rem; }
+  p { max-width: 62ch; }
+  .a-remplir { color: var(--gris); }
+
+  .bouton { display: inline-block; font-family: var(--sans); font-weight: 600; font-size: 1rem; text-decoration: none; padding: .85rem 1.5rem; border-radius: 999px; background: var(--vert); color: #fff; border: 0; cursor: pointer; transition: transform .15s ease; }
+  .bouton:hover { transform: translateY(-1px); }
+
+  /* En-tête */
+  .entete { position: sticky; top: 0; z-index: 10; background: rgba(247,247,242,.95); border-bottom: 1px solid var(--trait); color: var(--vert); }
+  .entete .conteneur { display: flex; align-items: center; justify-content: space-between; gap: 1rem; height: 64px; }
+  .marque { font-family: var(--serif); font-size: 1.15rem; text-decoration: none; white-space: nowrap; }
+  .menu { display: flex; gap: 1.75rem; list-style: none; }
+  .menu a { text-decoration: none; font-size: .95rem; color: var(--gris); }
+  .menu a:hover { color: var(--vert); }
+  .entete .bouton { padding: .55rem 1.1rem; font-size: .9rem; }
+
+  /* Ouverture : l'élément marquant du site, un lever de soleil doré */
+  .ouverture { background: var(--fond); position: relative; overflow: hidden; }
+  .ouverture .conteneur { padding-top: clamp(4rem, 10vw, 7rem); padding-bottom: clamp(9rem, 18vw, 13rem); position: relative; z-index: 2; }
+  .ouverture h1 { font-size: clamp(2.4rem, 6.5vw, 4.6rem); max-width: 16ch; margin-bottom: 1.5rem; }
+  .ouverture p { font-size: 1.15rem; color: var(--gris); margin-bottom: 2.25rem; max-width: 46ch; }
+  .horizon { position: absolute; left: 0; right: 0; bottom: 0; height: clamp(5rem, 10vw, 7rem); background: var(--vert-doux); z-index: 1; }
+  .soleil { position: absolute; z-index: 0; right: 12%; bottom: clamp(5rem, 10vw, 7rem); width: clamp(9rem, 22vw, 16rem); aspect-ratio: 1; border-radius: 50%; background: var(--or); transform: translateY(55%); animation: lever 2.4s cubic-bezier(.2,.7,.2,1) .3s both; }
+  @keyframes lever { from { transform: translateY(100%); } to { transform: translateY(55%); } }
+  @media (prefers-reduced-motion: reduce) { .soleil { animation: none; } html { scroll-behavior: auto; } }
+
+  section { padding: clamp(4rem, 9vw, 6.5rem) 0; }
+
+  /* Tu te reconnais ? */
+  .reconnais { background: var(--vert-doux); padding-top: clamp(2rem, 5vw, 3rem); }
+  .vecus { list-style: none; border-top: 1px solid rgba(29,84,70,.18); }
+  .vecus li { font-family: var(--serif); font-size: clamp(1.25rem, 2.6vw, 1.7rem); line-height: 1.35; padding: 1.4rem 0; border-bottom: 1px solid rgba(29,84,70,.18); color: var(--vert); }
+  .reconnais .suite { margin-top: 2rem; color: var(--gris); }
+
+  /* Approche */
+  .deux-colonnes { display: grid; grid-template-columns: 1.1fr .9fr; gap: clamp(2rem, 5vw, 4.5rem); align-items: center; }
+  .deux-colonnes p + p { margin-top: 1rem; }
+  .photo { background: var(--vert-doux); border: 1px dashed var(--vert); border-radius: 4px; aspect-ratio: 4 / 5; display: grid; place-items: center; color: var(--vert); font-size: .95rem; text-align: center; padding: 1rem; }
+
+  /* Comment ça se passe */
+  .deroule { background: var(--fond); }
+  .etapes { list-style: none; display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; counter-reset: etape; margin-bottom: 3rem; }
+  .etapes li { counter-increment: etape; border-top: 1px solid var(--vert); padding-top: 1.25rem; }
+  .etapes li::before { content: counter(etape); display: block; font-family: var(--serif); font-size: 2.6rem; line-height: 1; color: var(--or); margin-bottom: .75rem; }
+  .infos { background: var(--blanc); border: 1px solid var(--trait); border-radius: 4px; padding: 1.75rem; display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; }
+  .infos dt { font-size: .9rem; color: var(--gris); margin-bottom: .25rem; }
+  .infos dd { font-family: var(--serif); font-size: 1.2rem; color: var(--vert); }
+
+  /* À propos */
+  .apropos .deux-colonnes { grid-template-columns: .8fr 1.2fr; }
+
+  /* FAQ */
+  .faq { background: var(--fond); }
+  .faq details { border-bottom: 1px solid var(--trait); max-width: 760px; }
+  .faq details:first-of-type { border-top: 1px solid var(--trait); }
+  .faq summary { cursor: pointer; list-style: none; padding: 1.25rem 2.5rem 1.25rem 0; font-weight: 600; position: relative; }
+  .faq summary::-webkit-details-marker { display: none; }
+  .faq summary::after { content: "+"; position: absolute; right: .25rem; top: 50%; transform: translateY(-50%); font-family: var(--serif); font-size: 1.6rem; color: var(--or); transition: transform .2s ease; }
+  .faq details[open] summary::after { transform: translateY(-50%) rotate(45deg); }
+  .faq details p { padding-bottom: 1.25rem; }
+
+  /* Réserver */
+  .reserver { background: var(--vert-doux); }
+  .reserver p { color: var(--gris); margin-bottom: 2rem; }
+  .agenda { background: var(--blanc); border: 1px dashed var(--vert); border-radius: 4px; min-height: 260px; display: grid; place-items: center; text-align: center; padding: 2rem; color: var(--vert); margin-bottom: 2rem; }
+  .contact a { color: var(--vert); font-weight: 600; }
+
+  /* Pied de page et mentions */
+  .pied { background: var(--vert); color: rgba(255,255,255,.8); font-size: .9rem; padding: 2.5rem 0; }
+  .pied .conteneur { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem; }
+  .pied a { color: #fff; }
+  .legal { padding: 4rem 0; font-size: .95rem; }
+  .legal h2 { font-size: 1.6rem; }
+  .legal h3 { font-family: var(--sans); font-weight: 600; font-size: 1rem; margin-top: 1.5rem; color: var(--encre); }
+  .legal + .legal { border-top: 1px solid var(--trait); }
+
+  @media (max-width: 860px) {
+    .menu { display: none; }
+    .deux-colonnes, .apropos .deux-colonnes { grid-template-columns: 1fr; }
+    .apropos .photo { max-width: 320px; }
+    .etapes { grid-template-columns: 1fr; }
+    .infos { grid-template-columns: 1fr 1fr; }
+    .soleil { right: -8%; }
+  }
+</style>
+</head>
+<body>
+
+<header class="entete">
+  <div class="conteneur">
+    <a class="marque" href="#">[Prénom Nom]</a>
+    <nav aria-label="Menu principal">
+      <ul class="menu">
+        <li><a href="#approche">Approche</a></li>
+        <li><a href="#seance">Séance</a></li>
+        <li><a href="#apropos">À propos</a></li>
+        <li><a href="#faq">Questions</a></li>
+      </ul>
+    </nav>
+    <a class="bouton" href="#reserver">Prendre rendez-vous</a>
+  </div>
+</header>
+
+<main>
+  <!-- 1. OUVERTURE -->
+  <div class="ouverture">
+    <div class="conteneur">
+      <h1>[Ta phrase d'accroche, courte, en une ou deux lignes]</h1>
+      <p>[Une phrase qui précise : pour qui, quoi, où. Ex. naturopathe à Paris, le samedi.]</p>
+      <a class="bouton" href="#reserver">Prendre rendez-vous</a>
+    </div>
+    <div class="soleil" aria-hidden="true"></div>
+    <div class="horizon" aria-hidden="true"></div>
+  </div>
+
+  <!-- 2. TU TE RECONNAIS ? -->
+  <section class="reconnais" id="reconnais">
+    <div class="conteneur">
+      <h2>[Titre : Tu te reconnais ?]</h2>
+      <ul class="vecus">
+        <li>[Situation vécue n°1, décrite comme la personne la dirait]</li>
+        <li>[Situation vécue n°2, un moment précis de la journée par exemple]</li>
+        <li>[Situation vécue n°3, ce qu'on lui a dit ou ce qu'elle a déjà essayé]</li>
+        <li>[Situation vécue n°4, facultative]</li>
+      </ul>
+      <p class="suite">[Une phrase de transition vers ton approche.]</p>
+    </div>
+  </section>
+
+  <!-- 3. APPROCHE -->
+  <section class="approche" id="approche">
+    <div class="conteneur deux-colonnes">
+      <div>
+        <h2>[Titre de la section approche]</h2>
+        <p>[Premier paragraphe : ta vision de la fatigue et du terrain, trois à quatre phrases. Ce texte est volontairement long pour que la mise en page soit réaliste quand tu mettras le vrai.]</p>
+        <p>[Second paragraphe : ce que tu regardes concrètement avec la personne, et ce que ça change pour elle, trois phrases environ.]</p>
+      </div>
+      <div class="photo">[Photo d'ambiance<br>format vertical]</div>
+    </div>
+  </section>
+
+  <!-- 4. COMMENT ÇA SE PASSE -->
+  <section class="deroule" id="seance">
+    <div class="conteneur">
+      <h2>[Titre : Comment ça se passe]</h2>
+      <ol class="etapes">
+        <li><h3>[Étape 1 : premier bilan]</h3><p>[Deux phrases sur ce qui se passe pendant ce rendez-vous.]</p></li>
+        <li><h3>[Étape 2 : ton programme]</h3><p>[Deux phrases sur ce que la personne repart avec.]</p></li>
+        <li><h3>[Étape 3 : le suivi]</h3><p>[Deux phrases sur la suite et le rythme des rendez-vous.]</p></li>
+      </ol>
+      <dl class="infos">
+        <div><dt>Durée</dt><dd>[1 h 30]</dd></div>
+        <div><dt>Tarif</dt><dd>[00 €]</dd></div>
+        <div><dt>Lieu</dt><dd>[Paris 00e ou visio]</dd></div>
+        <div><dt>Quand</dt><dd>Le samedi</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- 5. À PROPOS -->
+  <section class="apropos" id="apropos">
+    <div class="conteneur deux-colonnes">
+      <div class="photo">[Ton portrait<br>lumière naturelle]</div>
+      <div>
+        <h2>[Titre : qui je suis]</h2>
+        <p>[Ta bio : ton parcours, ta formation, pourquoi la fatigue. Quatre à cinq phrases, à la première personne.]</p>
+        <p class="a-remplir">[Facultatif : ta formation et ton école.]</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. FAQ -->
+  <section class="faq" id="faq">
+    <div class="conteneur">
+      <h2>Questions fréquentes</h2>
+      <details><summary>[Est-ce que ça remplace un suivi médical ?]</summary><p>[Réponse en deux ou trois phrases.]</p></details>
+      <details><summary>[Les séances peuvent-elles se faire en visio ?]</summary><p>[Réponse.]</p></details>
+      <details><summary>[Est-ce remboursé par les mutuelles ?]</summary><p>[Réponse.]</p></details>
+      <details><summary>[Combien de séances faut-il prévoir ?]</summary><p>[Réponse.]</p></details>
+    </div>
+  </section>
+
+  <!-- 7. RÉSERVER -->
+  <section class="reserver" id="reserver">
+    <div class="conteneur">
+      <h2>Prendre rendez-vous</h2>
+      <p>[Une phrase : comment réserver, délai de réponse, ce qu'il faut prévoir.]</p>
+      <!-- Colle ici le code d'intégration de Cal.com ou Calendly à la place du bloc .agenda -->
+      <div class="agenda">[Ici, ton calendrier de réservation<br>Cal.com ou Calendly]</div>
+      <p class="contact">Une question avant de réserver ? <a href="mailto:[ton@email.fr]">[ton@email.fr]</a></p>
+    </div>
+  </section>
+
+  <!-- MENTIONS LÉGALES (obligatoires) -->
+  <section class="legal" id="mentions-legales">
+    <div class="conteneur">
+      <h2>Mentions légales</h2>
+      <h3>Éditrice du site</h3>
+      <p>[Prénom Nom], entrepreneure individuelle. SIRET : [numéro]. Adresse : [domiciliation ou mention de la ville]. Contact : [email].</p>
+      <h3>Hébergement</h3>
+      <p>[Nom de l'hébergeur, adresse et téléphone. Ex. Netlify, Inc.]</p>
+      <h3>Activité</h3>
+      <p>[Phrase précisant que la naturopathie ne remplace ni un diagnostic ni un traitement médical.]</p>
+    </div>
+  </section>
+
+  <section class="legal" id="confidentialite">
+    <div class="conteneur">
+      <h2>Politique de confidentialité</h2>
+      <p>[Quelles données tu collectes (prise de rendez-vous, emails), pourquoi, combien de temps tu les gardes, et comment demander leur suppression.]</p>
+    </div>
+  </section>
+</main>
+
+<footer class="pied">
+  <div class="conteneur">
+    <span>© 2027 [Prénom Nom] · Naturopathe · SIRET [numéro]</span>
+    <span><a href="#mentions-legales">Mentions légales</a> &nbsp; <a href="#confidentialite">Confidentialité</a></span>
+  </div>
+</footer>
+
+</body>
+</html>

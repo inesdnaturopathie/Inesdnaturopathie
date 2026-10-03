@@ -10,14 +10,14 @@
 <link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
-    --fond: #F7F7F2;
+    --fond: #F2F7F3;
     --blanc: #FFFFFF;
-    --vert: #1D5446;
-    --vert-doux: #E4EDE7;
-    --or: #B8955A;
+    --vert: #12694E;
+    --vert-doux: #DAEEE2;
+    --or: #C9A13B;
     --encre: #1B2622;
     --gris: #5D6964;
-    --trait: #D9DFD9;
+    --trait: #CFE2D6;
     --serif: "Young Serif", Georgia, "Times New Roman", serif;
     --sans: "Hanken Grotesk", "Helvetica Neue", Arial, sans-serif;
     --largeur: 1080px;
@@ -40,7 +40,7 @@
   .bouton:hover { transform: translateY(-1px); }
 
   /* En-tête */
-  .entete { position: sticky; top: 0; z-index: 10; background: rgba(247,247,242,.95); border-bottom: 1px solid var(--trait); color: var(--vert); }
+  .entete { position: sticky; top: 0; z-index: 10; background: rgba(242,247,243,.95); border-bottom: 1px solid var(--trait); color: var(--vert); }
   .entete .conteneur { display: flex; align-items: center; justify-content: space-between; gap: 1rem; height: 64px; }
   .marque { font-family: var(--serif); font-size: 1.15rem; text-decoration: none; white-space: nowrap; }
   .menu { display: flex; gap: 1.75rem; list-style: none; }
@@ -62,8 +62,8 @@
 
   /* Tu te reconnais ? */
   .reconnais { background: var(--vert-doux); padding-top: clamp(2rem, 5vw, 3rem); }
-  .vecus { list-style: none; border-top: 1px solid rgba(29,84,70,.18); }
-  .vecus li { font-family: var(--serif); font-size: clamp(1.25rem, 2.6vw, 1.7rem); line-height: 1.35; padding: 1.4rem 0; border-bottom: 1px solid rgba(29,84,70,.18); color: var(--vert); }
+  .vecus { list-style: none; border-top: 1px solid rgba(18,105,78,.18); }
+  .vecus li { font-family: var(--serif); font-size: clamp(1.25rem, 2.6vw, 1.7rem); line-height: 1.35; padding: 1.4rem 0; border-bottom: 1px solid rgba(18,105,78,.18); color: var(--vert); }
   .reconnais .suite { margin-top: 2rem; color: var(--gris); }
 
   /* Approche */
@@ -94,7 +94,7 @@
   .faq details p { padding-bottom: 1.25rem; }
 
   /* Réserver */
-  .reserver { background: var(--vert-doux); border-top: 1px solid rgba(29,84,70,.12); }
+  .reserver { background: var(--vert-doux); border-top: 1px solid rgba(18,105,78,.12); }
   .reserver p { color: var(--gris); margin-bottom: 2rem; }
   .agenda { background: var(--blanc); border: 1px dashed var(--vert); border-radius: 4px; min-height: 260px; display: grid; place-items: center; text-align: center; padding: 2rem; color: var(--vert); margin-bottom: 2rem; }
   .contact a { color: var(--vert); font-weight: 600; }
@@ -119,7 +119,7 @@
   /* Motifs de consultation */
   .motifs-section { background: var(--vert-doux); padding-top: clamp(2rem, 5vw, 3rem); }
   .motifs { list-style: none; display: grid; grid-template-columns: repeat(3, 1fr); gap: 0 2.5rem; }
-  .motifs li { border-top: 1px solid rgba(29,84,70,.18); padding: 1.25rem 0 1.5rem; }
+  .motifs li { border-top: 1px solid rgba(18,105,78,.18); padding: 1.25rem 0 1.5rem; }
   .motifs h3 { font-size: 1.2rem; }
   .motifs p { color: var(--gris); font-size: 1rem; }
   .motifs-section .suite { margin-top: 1.5rem; color: var(--gris); }
@@ -141,6 +141,20 @@
     .motifs { grid-template-columns: 1fr; }
     .specialite .colonnes { grid-template-columns: 1fr; }
   }
+
+  /* Touches dorées */
+  section:not(.legal) h2::after { content: ""; display: block; width: 40px; height: 2px; background: var(--or); margin-top: .9rem; }
+  .motifs h3::before { content: ""; display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: var(--or); margin-right: .6rem; vertical-align: middle; transform: translateY(-2px); }
+  .specialite .vecus-courts li { padding-left: 1.4rem; position: relative; }
+  .specialite .vecus-courts li::before { content: ""; position: absolute; left: 0; top: 1.55rem; width: 6px; height: 6px; border-radius: 50%; background: var(--or); }
+  .menu a { padding-bottom: 3px; background: linear-gradient(var(--or), var(--or)) left bottom / 0 1px no-repeat; transition: background-size .25s ease, color .2s ease; }
+  .menu a:hover { background-size: 100% 1px; }
+  .marque { display: inline-flex; align-items: center; gap: .55rem; }
+  .marque::before, .mini-soleil { content: ""; display: block; background: var(--or); -webkit-mask: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2048%2030%22%3E%3Cg%20stroke%3D%22%23000%22%20stroke-width%3D%222.2%22%20stroke-linecap%3D%22round%22%20fill%3D%22none%22%3E%3Cline%20x1%3D%2235.7%22%20y1%3D%2221.7%22%20x2%3D%2240.9%22%20y2%3D%2219.8%22/%3E%3Cline%20x1%3D%2231.2%22%20y1%3D%2215.8%22%20x2%3D%2234.3%22%20y2%3D%2211.3%22/%3E%3Cline%20x1%3D%2224.0%22%20y1%3D%2213.5%22%20x2%3D%2224.0%22%20y2%3D%228.0%22/%3E%3Cline%20x1%3D%2216.8%22%20y1%3D%2215.8%22%20x2%3D%2213.7%22%20y2%3D%2211.3%22/%3E%3Cline%20x1%3D%2212.3%22%20y1%3D%2221.7%22%20x2%3D%227.1%22%20y2%3D%2219.8%22/%3E%3Cline%20x1%3D%223%22%20y1%3D%2227%22%20x2%3D%2245%22%20y2%3D%2227%22/%3E%3C/g%3E%3Cpath%20d%3D%22M15%2026a9%209%200%200%201%2018%200z%22%20fill%3D%22%23000%22/%3E%3C/svg%3E") center / contain no-repeat; mask: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2048%2030%22%3E%3Cg%20stroke%3D%22%23000%22%20stroke-width%3D%222.2%22%20stroke-linecap%3D%22round%22%20fill%3D%22none%22%3E%3Cline%20x1%3D%2235.7%22%20y1%3D%2221.7%22%20x2%3D%2240.9%22%20y2%3D%2219.8%22/%3E%3Cline%20x1%3D%2231.2%22%20y1%3D%2215.8%22%20x2%3D%2234.3%22%20y2%3D%2211.3%22/%3E%3Cline%20x1%3D%2224.0%22%20y1%3D%2213.5%22%20x2%3D%2224.0%22%20y2%3D%228.0%22/%3E%3Cline%20x1%3D%2216.8%22%20y1%3D%2215.8%22%20x2%3D%2213.7%22%20y2%3D%2211.3%22/%3E%3Cline%20x1%3D%2212.3%22%20y1%3D%2221.7%22%20x2%3D%227.1%22%20y2%3D%2219.8%22/%3E%3Cline%20x1%3D%223%22%20y1%3D%2227%22%20x2%3D%2245%22%20y2%3D%2227%22/%3E%3C/g%3E%3Cpath%20d%3D%22M15%2026a9%209%200%200%201%2018%200z%22%20fill%3D%22%23000%22/%3E%3C/svg%3E") center / contain no-repeat; }
+  .marque::before { width: 26px; height: 16px; }
+  .mini-soleil { width: 56px; height: 35px; margin-bottom: 1.25rem; }
+  .pied { border-top: 3px solid var(--or); }
+  .pied .nom { color: var(--or); font-family: var(--serif); }
 </style>
 </head>
 <body>
@@ -198,6 +212,7 @@
 
   <section class="specialite" id="fatigue">
     <div class="conteneur">
+      <div class="mini-soleil" aria-hidden="true"></div>
       <h2>Un accompagnement spécialisé sur la fatigue</h2>
       <div class="colonnes">
         <div>
@@ -243,9 +258,9 @@
   <section class="faq" id="faq">
     <div class="conteneur">
       <h2>Questions fréquentes</h2>
-      <details><summary>Est-ce que ça remplace un suivi médical ?</summary><p>Non. La naturopathie vient en complément d'un suivi médical, jamais à sa place. Si ce qui vous amène n'a pas encore été vu par un médecin, c'est la première chose que je vous conseillerai.</p></details>
+      <details><summary>Est-ce qu'une séance de naturopathie remplace un suivi médical ?</summary><p>Non. La naturopathie vient en complément d'un suivi médical, jamais à sa place. Si ce qui vous amène n'a pas encore été vu par un médecin, c'est la première chose que je vous conseillerai.</p></details>
       <details><summary>Les séances peuvent-elles se faire en visio ?</summary><p>Non. Le bilan et les suivis se font au cabinet, en présentiel.</p></details>
-      <details><summary>Est-ce remboursé ?</summary><p>Certaines mutuelles prennent en charge une partie des consultations de naturopathie. Renseignez-vous auprès de la vôtre ; une facture vous est remise à chaque séance.</p></details>
+      <details><summary>Les séances de naturopathie sont-elles remboursées ?</summary><p>Certaines mutuelles prennent en charge une partie des consultations de naturopathie. Renseignez-vous auprès de la vôtre ; une facture vous est remise à chaque séance.</p></details>
     </div>
   </section>
 
@@ -265,7 +280,7 @@
     <div class="conteneur">
       <h2>Mentions légales</h2>
       <h3>Éditrice du site</h3>
-      <p>Inès Djili, entrepreneure individuelle. SIRET : [numéro]. Adresse : [adresse professionnelle ou de domiciliation]. Téléphone : [numéro]. Email : inesd.naturopathie@gmail.com.</p>
+      <p>Inès Djili, entrepreneure individuelle. SIREN : 108 572 512. Adresse : [adresse professionnelle ou de domiciliation]. Téléphone : [numéro]. Email : inesd.naturopathie@gmail.com.</p>
       <h3>Hébergement</h3>
       <p>GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis.</p>
       <h3>Activité</h3>
@@ -283,7 +298,7 @@
 
 <footer class="pied">
   <div class="conteneur">
-    <span>© Inès Djili · Naturopathe à Neuilly-sur-Seine · SIRET [numéro]</span>
+    <span>© <span class="nom">Inès Djili</span> · Naturopathe à Neuilly-sur-Seine · SIREN 108 572 512</span>
     <span><a href="#mentions-legales">Mentions légales</a> &nbsp; <a href="#confidentialite">Confidentialité</a></span>
   </div>
 </footer>

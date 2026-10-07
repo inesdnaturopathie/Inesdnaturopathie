@@ -33,11 +33,11 @@
   h1, h2, h3 { font-family: var(--serif); font-weight: 400; line-height: 1.15; color: var(--vert); }
   h2 { font-size: clamp(1.75rem, 4vw, 2.5rem); margin-bottom: 1.5rem; max-width: 20ch; }
   h3 { font-size: 1.3rem; margin-bottom: .5rem; }
-  p { max-width: 62ch; text-align: justify; -webkit-hyphens: auto; hyphens: auto; }
+  p { max-width: 62ch; }
   .langues { text-align: left; font-weight: 500; color: var(--vert); margin-top: .75rem; }
   .langues { font-style: italic; }
   .lien-memoire { text-align: left; }
-  .lien-memoire a { color: var(--vert); font-weight: 600; text-decoration: none; border-bottom: 2px solid var(--or); padding-bottom: 2px; }
+  .lien-memoire { margin-top: 1.5rem; }
   .a-remplir { color: var(--gris); }
 
   .bouton { display: inline-block; font-family: var(--sans); font-weight: 600; font-size: 1rem; text-decoration: none; padding: .85rem 1.5rem; border-radius: 999px; background: var(--vert); color: #fff; border: 0; cursor: pointer; transition: transform .15s ease; }
@@ -121,7 +121,7 @@
     .soleil { right: -8%; }
   }
   /* Motifs de consultation */
-  .motifs-section { background: var(--vert-doux); padding-top: clamp(2rem, 5vw, 3rem); }
+  .motifs-section { background: var(--vert-doux); }
   .motifs { list-style: none; display: grid; grid-template-columns: repeat(3, 1fr); gap: 0 2.5rem; }
   .motifs li { border-top: 1px solid rgba(18,105,78,.18); padding: 1.25rem 0 1.5rem; }
   .motifs h3 { font-size: 1.2rem; }
@@ -168,10 +168,10 @@
     <a class="marque" href="#">Inès Djili</a>
     <nav aria-label="Menu principal">
       <ul class="menu">
+        <li><a href="#apropos">Qui suis-je ?</a></li>
         <li><a href="#approche">Approche</a></li>
         <li><a href="#fatigue">Fatigue</a></li>
         <li><a href="#seance">Séance</a></li>
-        <li><a href="#apropos">À propos</a></li>
       </ul>
     </nav>
     <a class="bouton" href="#reserver">Prendre rendez-vous</a>
@@ -181,14 +181,25 @@
 <main>
   <div class="ouverture">
     <div class="conteneur">
-      <h1>Prendre soin de votre vitalité, de votre bien-être et de votre santé.</h1>
-      <p>Naturopathe à Neuilly-sur-Seine, je vous accompagne pour retrouver un équilibre de santé au quotidien : énergie, sommeil, digestion, stress, activité physique, gestion de la fatigue. Consultations le samedi, à compter de janvier 2027.</p>
-      <p class="langues" lang="en">Sessions also available in English</p>
+      <h1>Prendre soin de votre vitalité, de votre bien-être et de votre équilibre.</h1>
+      <p>Naturopathe à Neuilly-sur-Seine, je vous accompagne pour trouver ou retrouver un équilibre de santé au quotidien : énergie, sommeil, digestion, stress, activité physique, gestion de la fatigue. Consultations le samedi, à compter de janvier 2027.</p>
       <a class="bouton" href="#reserver">Prendre rendez-vous</a>
     </div>
     <div class="soleil" aria-hidden="true"></div>
     <div class="horizon" aria-hidden="true"></div>
   </div>
+
+  <section class="apropos" id="apropos">
+    <div class="conteneur deux-colonnes">
+      <img class="photo" src="portrait.jpg" alt="Portrait d'Inès Djili, naturopathe à Neuilly-sur-Seine" width="800" height="1000">
+      <div>
+        <h2>Qui suis-je ?</h2>
+        <p>Je suis Inès Djili, naturopathe à Neuilly-sur-Seine. Je vous accompagne sur le chemin de votre équilibre, avec une spécialisation sur la fatigue.</p>
+        <p>Ce qui m'a menée à la naturopathie, c'est d'abord un besoin de comprendre ce qui se passe réellement dans le corps. En approfondissant, j'ai découvert que de nombreux maux du quotidien peuvent refléter des déséquilibres de fond. Et qu'il est souvent possible d'agir sur ces déséquilibres grâce à de nombreux leviers : l'alimentation, le sommeil, l'activité physique ou encore la gestion du stress.</p>
+        <p>Cette curiosité est devenue une véritable passion pour le fonctionnement du corps humain. Je me suis formée de 2021 à 2025 à l'Institut supérieur de naturopathie (ISUPNAT), une formation certifiée FENA. Je suis titulaire d'un bachelor en naturopathie délivré par la FEDE.</p>
+      </div>
+    </div>
+  </section>
 
   <section class="motifs-section" id="motifs">
     <div class="conteneur">
@@ -197,9 +208,10 @@
         <li><h3>Fatigue</h3><p>Une fatigue qui s'installe et que le repos ne suffit plus à effacer.</p></li>
         <li><h3>Sommeil</h3><p>Des nuits trop courtes, agitées ou qui ne reposent pas vraiment.</p></li>
         <li><h3>Digestion</h3><p>Ballonnements, inconfort, un ventre qui réagit à tout, malgré tout ce que vous avez déjà essayé.</p></li>
-        <li><h3>Stress et charge mentale</h3><p>Le sentiment de tourner à plein régime sans jamais redescendre. Ou au contraire le trop-plein et l'impression de ne plus rien pouvoir gérer.</p></li>
+        <li><h3>Alimentation</h3><p>L'envie de mieux manger sans régime, des fringales, des coups de barre après les repas.</p></li>
+        <li><h3>Concentration et brouillard mental</h3><p>La tête qui ne suit plus : du mal à vous concentrer, des trous de mémoire, l'impression de penser à travers un brouillard.</p></li>
         <li><h3>Peau réactive</h3><p>Dans beaucoup de cas, la peau reflète des déséquilibres intérieurs. Je vous aide à comprendre lesquels.</p></li>
-        <li><h3>Déséquilibres féminins</h3><p>Un cycle inconfortable, douloureux, irrégulier ou que vous ne comprenez pas, des variations hormonales qui pèsent sur le quotidien.</p></li>
+        <li><h3>Déséquilibres féminins</h3><p>Un cycle inconfortable, douloureux, irrégulier ou que vous ne comprenez pas, des variations hormonales qui pèsent sur le quotidien. À chaque étape de la vie : puberté, désir de grossesse, après une naissance, périménopause et ménopause.</p></li>
         <li><h3>Prévention</h3><p>Faire le point sur votre hygiène de vie, sans attendre que votre corps ne vous le fasse savoir.</p></li>
       </ul>
       <p class="suite">Cette liste n'est pas exhaustive : n'hésitez pas à me contacter pour toute autre demande.</p>
@@ -211,7 +223,7 @@
       <h2>Une approche globale</h2>
       <p>En naturopathie, on ne regarde pas un inconfort isolément. Sommeil, alimentation, activité physique, digestion, rythme de vie, émotions : tout se tient. Nous cherchons à comprendre ce qui, dans votre terrain, a besoin d'être soutenu plutôt que de masquer ce qui se manifeste.</p>
       <p>Le naturopathe est avant tout un éducateur de santé. Notre échange est construit sur la pédagogie avec le souhait que vous quittiez mon cabinet en ayant une meilleure compréhension des mécanismes de votre corps et de la physiologie sous-jacente.</p>
-      <p>Ensemble, nous faisons le point sur votre quotidien pour identifier les leviers suffisamment impactants pour atteindre l'objectif : des changements réalistes, adaptés à votre vie, qui tiennent dans la durée.</p>
+      <p>Ensemble, nous faisons le point sur votre quotidien pour identifier les leviers suffisamment impactants pour atteindre l'objectif : des changements réalistes, adaptés à votre vie, qui tiennent dans la durée et qui vous font vraiment du bien.</p>
     </div>
   </section>
 
@@ -223,12 +235,15 @@
         <div>
           <p>La vie et mon parcours personnel m'ont amenée à beaucoup étudier la fatigue. C'est pourquoi je propose aujourd'hui un accompagnement spécialisé sur ce sujet, auquel j'ai aussi consacré mon mémoire de fin de formation.</p>
           <p>La fatigue est un symptôme aux dizaines de causes possibles. Elle s'exprime aussi très différemment chez chacun d'entre nous. C'est pour cette raison qu'elle demande une approche très individualisée.</p>
-          <p class="lien-memoire"><a href="memoire.html">Ce que mon mémoire sur la fatigue m’a appris →</a></p>
+          <p class="lien-memoire"><a class="bouton bouton-secondaire" href="memoire.html">Lire mon mémoire sur la fatigue</a></p>
         </div>
         <ul class="vecus-courts">
           <li>Le réveil sonne et la journée paraît déjà trop longue.</li>
-          <li>Un café pour démarrer, plusieurs autres pour tenir.</li>
           <li>Les week-ends servent à récupérer, plus vraiment à vivre.</li>
+          <li>Vous êtes épuisé le soir, mais incapable de vous endormir.</li>
+          <li>Le moindre imprévu vous paraît insurmontable.</li>
+          <li>Vous ne vous souvenez plus de la dernière fois où vous vous êtes senti en forme.</li>
+          <li>Vous êtes entré en mode survie sans plus jamais en ressortir.</li>
         </ul>
       </div>
     </div>
@@ -240,7 +255,7 @@
       <ol class="etapes">
         <li><h3>Le bilan de vitalité</h3><p>Un premier rendez-vous pour comprendre votre demande, votre rythme et votre histoire. Je prends le temps d'écouter et de questionner avant de proposer quoi que ce soit.</p></li>
         <li><h3>Votre protocole d'hygiène de vie</h3><p>Vous repartez avec un protocole écrit et personnalisé, avec des priorités claires plutôt qu'une liste de tout ce qu'il faudrait changer.</p></li>
-        <li><h3>Le suivi</h3><p>Quelques semaines plus tard, on fait le point : ce qui fonctionne, ce qui coince et comment avancer à votre rythme.</p></li>
+        <li><h3>Le suivi</h3><p>Quelques semaines ou quelques mois plus tard, on fait le point : ce qui fonctionne, ce qui coince et comment avancer à votre rythme.</p></li>
       </ol>
       <dl class="infos">
         <div><dt>Durée</dt><dd>1 h 30 pour le bilan<br>1 h pour un suivi</dd></div>
@@ -251,20 +266,12 @@
     </div>
   </section>
 
-  <section class="apropos" id="apropos">
-    <div class="conteneur deux-colonnes">
-      <img class="photo" src="portrait.jpg" alt="Portrait d'Inès Djili, naturopathe à Neuilly-sur-Seine" width="800" height="1000" loading="lazy">
-      <div>
-        <h2>Qui je suis</h2>
-        <p>Je suis Inès Djili, naturopathe à Neuilly-sur-Seine. J'accompagne les questions d'hygiène de vie au sens large avec une spécialisation sur la fatigue.</p>
-        <p>Ce qui m'a menée à la naturopathie, c'est mon propre parcours pour comprendre mon corps. Il a fait naître une vraie passion pour le fonctionnement du corps humain, qui m'a conduite à me former à l'ISUPNAT de 2021 à 2025.</p>
-      </div>
-    </div>
-  </section>
 
   <section class="faq" id="faq">
     <div class="conteneur">
       <h2>Questions fréquentes</h2>
+      <details><summary>Qu'est-ce que la naturopathie ?</summary><p>La naturopathie est une approche d'hygiène de vie. Elle s'intéresse à la personne dans sa globalité et cherche à soutenir les capacités d'équilibre de l'organisme en agissant sur le quotidien : l'alimentation, le sommeil, l'activité physique, la gestion du stress ou encore la digestion. Elle ne pose pas de diagnostic et ne prescrit pas de traitement : elle vient en complément d'un suivi médical.</p></details>
+      <details><summary>À qui s'adresse la naturopathie ?</summary><p>À toute personne qui ressent un inconfort persistant sans trouver de réponse satisfaisante, qui traverse une période de vie qui la bouscule ou qui souhaite simplement prendre soin d'elle en prévention. Il n'est pas nécessaire d'aller mal pour consulter : on peut aussi venir pour mieux comprendre son corps et ajuster ses habitudes.</p></details>
       <details><summary>Est-ce qu'une séance de naturopathie remplace un suivi médical ?</summary><p>Non. La naturopathie vient en complément d'un suivi médical, jamais à sa place. Si ce qui vous amène n'a pas encore été vu par un médecin, c'est la première chose que je vous conseillerai.</p></details>
       <details><summary>Les séances peuvent-elles se faire en visio ?</summary><p>Non. Le bilan et les suivis se font au cabinet, en présentiel.</p></details>
       <details><summary>Les séances de naturopathie sont-elles remboursées ?</summary><p>Certaines mutuelles prennent en charge une partie des consultations de naturopathie. Renseignez-vous auprès de la vôtre ; une facture vous est remise à chaque séance.</p></details>

@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Functional fatigue · A summary of Inès Djili's dissertation</title>
+<meta name="description" content="A summary of the dissertation by Inès Djili, naturopath in Neuilly-sur-Seine: functional fatigue, the mechanisms behind it and the naturopathic view of the body as a whole.">
+<link rel="alternate" hreflang="fr" href="https://inesd-naturopathe.fr/memoire.html">
+<link rel="alternate" hreflang="en" href="https://inesd-naturopathe.fr/memoire-en.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root { --fond:#F2F7F3; --blanc:#FFFFFF; --vert:#12694E; --vert-doux:#DAEEE2; --or:#C9A13B; --encre:#1B2622; --gris:#5D6964; --trait:#CFE2D6;
+    --serif:"Young Serif", Georgia, "Times New Roman", serif; --sans:"Hanken Grotesk", "Helvetica Neue", Arial, sans-serif; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { font-family:var(--sans); font-size:1.0625rem; line-height:1.7; color:var(--encre); background:var(--fond); }
+  a { color:inherit; }
+  :focus-visible { outline:3px solid var(--or); outline-offset:3px; }
+  .conteneur { width:100%; max-width:760px; margin:0 auto; padding:0 1.5rem; }
+  .entete { background:rgba(242,247,243,.95); border-bottom:1px solid var(--trait); position:sticky; top:0; z-index:5; }
+  .entete .conteneur { display:flex; justify-content:space-between; align-items:center; padding-top:1rem; padding-bottom:1rem; }
+  .marque { font-family:var(--serif); font-size:1.15rem; text-decoration:none; color:var(--vert); display:inline-flex; align-items:center; gap:.55rem; }
+  .marque::before { content:""; width:26px; height:16px; background:var(--or); -webkit-mask:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2048%2030%22%3E%3Cg%20stroke%3D%22%23000%22%20stroke-width%3D%222.2%22%20stroke-linecap%3D%22round%22%20fill%3D%22none%22%3E%3Cline%20x1%3D%2235.7%22%20y1%3D%2221.7%22%20x2%3D%2240.9%22%20y2%3D%2219.8%22/%3E%3Cline%20x1%3D%2231.2%22%20y1%3D%2215.8%22%20x2%3D%2234.3%22%20y2%3D%2211.3%22/%3E%3Cline%20x1%3D%2224.0%22%20y1%3D%2213.5%22%20x2%3D%2224.0%22%20y2%3D%228.0%22/%3E%3Cline%20x1%3D%2216.8%22%20y1%3D%2215.8%22%20x2%3D%2213.7%22%20y2%3D%2211.3%22/%3E%3Cline%20x1%3D%2212.3%22%20y1%3D%2221.7%22%20x2%3D%227.1%22%20y2%3D%2219.8%22/%3E%3Cline%20x1%3D%223%22%20y1%3D%2227%22%20x2%3D%2245%22%20y2%3D%2227%22/%3E%3C/g%3E%3Cpath%20d%3D%22M15%2026a9%209%200%200%201%2018%200z%22%20fill%3D%22%23000%22/%3E%3C/svg%3E") center / contain no-repeat; mask:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2048%2030%22%3E%3Cg%20stroke%3D%22%23000%22%20stroke-width%3D%222.2%22%20stroke-linecap%3D%22round%22%20fill%3D%22none%22%3E%3Cline%20x1%3D%2235.7%22%20y1%3D%2221.7%22%20x2%3D%2240.9%22%20y2%3D%2219.8%22/%3E%3Cline%20x1%3D%2231.2%22%20y1%3D%2215.8%22%20x2%3D%2234.3%22%20y2%3D%2211.3%22/%3E%3Cline%20x1%3D%2224.0%22%20y1%3D%2213.5%22%20x2%3D%2224.0%22%20y2%3D%228.0%22/%3E%3Cline%20x1%3D%2216.8%22%20y1%3D%2215.8%22%20x2%3D%2213.7%22%20y2%3D%2211.3%22/%3E%3Cline%20x1%3D%2212.3%22%20y1%3D%2221.7%22%20x2%3D%227.1%22%20y2%3D%2219.8%22/%3E%3Cline%20x1%3D%223%22%20y1%3D%2227%22%20x2%3D%2245%22%20y2%3D%2227%22/%3E%3C/g%3E%3Cpath%20d%3D%22M15%2026a9%209%200%200%201%2018%200z%22%20fill%3D%22%23000%22/%3E%3C/svg%3E") center / contain no-repeat; }
+  .retour { color:var(--vert); font-size:.95rem; text-decoration:none; }
+  .article { padding-top:3.5rem; padding-bottom:4rem; }
+  .surtitre { color:var(--or); font-weight:600; font-size:.85rem; letter-spacing:.08em; text-transform:uppercase; margin-bottom:.75rem; }
+  h1, h2 { font-family:var(--serif); font-weight:400; color:var(--vert); line-height:1.15; }
+  h1 { font-size:clamp(2.2rem, 7vw, 3.2rem); }
+  .soustitre { font-family:var(--serif); color:var(--vert); font-size:1.25rem; margin-top:.5rem; }
+  .meta { color:var(--gris); font-size:.95rem; margin-top:1rem; padding-bottom:2rem; border-bottom:1px solid var(--trait); }
+  h2 { font-size:clamp(1.5rem, 4.5vw, 1.9rem); margin:3rem 0 1.25rem; }
+  h2::after { content:""; display:block; width:40px; height:2px; background:var(--or); margin-top:.9rem; }
+  p { margin-bottom:1.1rem; }
+  .surtitre, .soustitre, .meta { text-align:left; }
+  .chapo { font-family:var(--serif); color:var(--vert); font-size:1.2rem; line-height:1.55; margin-top:2rem; text-align:left; }
+  strong { font-weight:600; color:var(--vert); }
+  .liste { list-style:none; margin:0 0 1.25rem; }
+  .liste li { position:relative; padding-left:1.4rem; margin-bottom:.85rem; }
+  .liste li::before { content:""; position:absolute; left:0; top:.7em; width:7px; height:7px; border-radius:50%; background:var(--or); }
+  .cta { margin-top:3.5rem; padding:2rem; background:var(--vert-doux); border-radius:6px; text-align:center; }
+  .cta p { text-align:center; font-family:var(--serif); color:var(--vert); font-size:1.3rem; }
+  .bouton { display:inline-block; background:var(--vert); color:#fff; text-decoration:none; padding:.85rem 1.6rem; border-radius:999px; font-weight:600; }
+  .pied { background:var(--vert); color:rgba(255,255,255,.8); font-size:.9rem; padding:2.5rem 0; border-top:3px solid var(--or); }
+  .pied .conteneur { display:flex; flex-wrap:wrap; justify-content:space-between; gap:1rem; max-width:1080px; }
+  .pied a { color:#fff; }
+  .pied .nom { color:var(--or); font-family:var(--serif); }
+  .actions { display:flex; align-items:center; gap:1rem; }
+  .langue { font-size:.85rem; font-weight:600; color:var(--gris); white-space:nowrap; }
+  .langue a { text-decoration:none; color:var(--gris); }
+  .langue [aria-current] { color:var(--vert); border-bottom:2px solid var(--or); }
+</style>
+</head>
+<body>
+<header class="entete">
+  <div class="conteneur">
+    <a class="marque" href="en.html">Inès Djili</a>
+    <div class="actions">
+      <span class="langue"><a href="memoire.html" hreflang="fr" lang="fr">FR</a> | <span aria-current="true">EN</span></span>
+      <a class="retour" href="en.html#fatigue">← Back</a>
+    </div>
+  </div>
+</header>
+
+<main class="conteneur article">
+  <p class="surtitre">From my final dissertation</p>
+  <h1>Exhausted, even though your test results are normal?</h1>
+  <p class="meta">Inès Djili · Naturopath · Dissertation: "Functional fatigue: a naturopathic reading of the individual terrain and the mitochondrial exposome" (ISUPNAT, 2025, in French)</p>
+
+  <p class="chapo">You sleep, you take holidays, you've had blood tests. Everything comes back normal. And yet the fatigue is there, every single day: crushing, even debilitating. A tiredness that long nights of sleep can't ease, a feeling of surviving rather than living. This is the fatigue my dissertation is about.</p>
+
+  <h2>A real fatigue that tests don't pick up</h2>
+  <p>There are two broad families of fatigue. The first is caused by an imbalance or an illness. Your doctor finds it, treats it and the fatigue goes away. This is always the first avenue to explore.</p>
+  <p>The second family of fatigue is more puzzling. It's called <strong>functional</strong> fatigue: it sets in without any identifiable illness, doesn't improve with rest and often goes unexplained. With no visible cause, people are often told "it's nothing" or "it's just stress". The problem is, they still have to live with it.</p>
+  <p>My starting point was simple: if tests show nothing, it doesn't mean nothing is going on. Perhaps we're just not looking in the right place, or in the right way.</p>
+
+  <h2>The overflowing glass</h2>
+  <p>The central idea of my work comes down to one image: a glass that overflows.</p>
+  <p>Every day, our body absorbs a series of small stresses. A diet low in nutrients, nights that are too short, stress that never lets up, too little movement or, on the contrary, too much training, chemicals in our environment, a digestive system that isn't working well… Taken one by one, none of these is enough to wear anyone out. But they add up, day after day, year after year.</p>
+  <p>Researchers have a word for everything that fills the glass: the <strong>exposome</strong>. It covers all the exposures we accumulate over our lifetime, from what we eat to what we breathe, including our pace of life and our stress.</p>
+  <p>As long as the body has the time or the reserves to recover between one demand and the next, it compensates. The day the total exceeds its ability to adapt, the glass overflows. So fatigue doesn't necessarily come from one "big" problem: it can be the result of many small imbalances piling up, each too subtle to raise the alarm.</p>
+
+  <h2>Where it all comes together: the power plants of our cells</h2>
+  <p>Why can all these small stresses end up showing up as fatigue? Because they share a common meeting point: the <strong>mitochondria</strong>.</p>
+  <p>Mitochondria are tiny power plants found in almost all of our cells. They turn what we eat and breathe into usable energy. They are also very sensitive: they need many vitamins and minerals to run, and they are damaged by inflammation, chronic stress and certain toxins. When they are overwhelmed, energy production drops. And what you feel is fatigue.</p>
+  <p>Understanding this mechanism changes the way we approach the problem. We stop looking for "the" single cause of fatigue. Instead, we look for what, in your own life, is filling the glass.</p>
+
+  <h2>Why we keep going… until the day we can't</h2>
+  <p>Many people affected by this kind of fatigue don't look tired at all. They work, exercise and juggle one commitment after another. This is sometimes called being <em>"wired but tired"</em>.</p>
+  <p>In this case, the body is no longer running on its real reserves but on borrowed energy. It works for a while. Then the bill arrives, often suddenly: a crash after an intense period, holidays spent sleeping, a weekend that's no longer enough to recover.</p>
+
+  <h2>There's no one-size-fits-all solution, but together we'll build yours</h2>
+  <p>If fatigue comes from accumulation, then what fills the glass isn't the same for everyone. For one person, it will mostly be sleep and stress. For another, digestion and diet. For a third, too much training on a body that's already depleted. Sometimes, it's that levels of minerals and trace elements are not optimal.</p>
+  <p>That's why a random "anti-fatigue" supplement so often disappoints, and why the same advice can help one person and exhaust the next. In naturopathy, we talk about the <strong>terrain</strong>: your overall state, unique to you, shaped by your history and your lifestyle.</p>
+  <p>The good news is that this terrain isn't set in stone. Research shows that our lifestyle habits directly influence how our body functions, right down to how our genes are expressed. So there are real, everyday levers we can act on through our lifestyle.</p>
+
+  <h2>What this means in practice</h2>
+  <p>My work isn't about adding more to your life, but about identifying what weighs on you most and lightening that first. Sleep, food, movement, stress management: everything matters, but not everything matters as much, or in the same way, for each person. Knowing <strong>where to start</strong> is often more useful than a long list of recommendations.</p>
+  <p>This approach never replaces medical advice. Any persistent fatigue should be checked by a doctor first.</p>
+  <p>Above all, I want you to leave with an understanding of what's happening in your body. Because once you understand it, fatigue stops being an enemy to fight: it becomes a signal. The signal of a body that isn't asking to be pushed even harder, but to be relieved of what is draining it.</p>
+  <p>I'd be delighted to walk with you on the path back to your full energy.</p>
+  <div class="cta">
+    <p>Does this fatigue sound familiar?</p>
+    <a class="bouton" href="en.html#reserver">Book an appointment</a>
+  </div>
+</main>
+
+<footer class="pied">
+  <div class="conteneur">
+    <span>© 2025 <span class="nom">Inès Djili</span> · Text and dissertation protected by copyright · Do not reproduce without permission</span>
+    <span><a href="en.html">Back to the website</a></span>
+  </div>
+</footer>
+</body>
+</html>

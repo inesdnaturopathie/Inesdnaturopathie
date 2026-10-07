@@ -69,7 +69,7 @@
   /* Approche */
   .deux-colonnes { display: grid; grid-template-columns: 1.1fr .9fr; gap: clamp(2rem, 5vw, 4.5rem); align-items: center; }
   .deux-colonnes p + p { margin-top: 1rem; }
-  .photo { background: var(--vert-doux); border: 1px dashed var(--vert); border-radius: 4px; aspect-ratio: 4 / 5; display: grid; place-items: center; color: var(--vert); font-size: .95rem; text-align: center; padding: 1rem; }
+  .photo { display: block; width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 4px; border-bottom: 3px solid var(--or); }
 
   /* Comment ça se passe */
   .deroule { background: var(--vert-doux); }
@@ -246,7 +246,7 @@
 
   <section class="apropos" id="apropos">
     <div class="conteneur deux-colonnes">
-      <div class="photo">[Ton portrait<br>lumière naturelle]</div>
+      <img class="photo" src="portrait.jpg" alt="Portrait d'Inès Djili, naturopathe à Neuilly-sur-Seine" width="800" height="1000" loading="lazy">
       <div>
         <h2>Qui je suis</h2>
         <p>Je suis Inès Djili, naturopathe à Neuilly-sur-Seine. J'accompagne les questions d'hygiène de vie au sens large avec une spécialisation sur la fatigue.</p>
